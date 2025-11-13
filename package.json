@@ -1,0 +1,52 @@
+{
+  "name": "n8n-nodes-capishop",
+  "version": "1.0.0",
+  "description": "CAPIShop - Nuvemshop Integration for N8N",
+  "keywords": [
+    "n8n-community-node-package",
+    "n8n",
+    "nuvemshop",
+    "tiendanube",
+    "ecommerce"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/SEU_USUARIO/n8n-nodes-capishop",
+  "author": {
+    "name": "SEU_NOME",
+    "email": "seu@email.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SEU_USUARIO/n8n-nodes-capishop.git"
+  },
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsc --watch",
+    "format": "prettier --write \"**/*.{ts,json,md}\"",
+    "lint": "eslint . --ext .ts",
+    "test": "jest"
+  },
+  "files": [
+    "dist"
+  ],
+  "n8n": {
+    "n8nNodesApiVersion": 1,
+    "credentials": [
+      "dist/credentials/NuvemshopApi.credentials.js"
+    ],
+    "nodes": [
+      "dist/nodes/CAPIShop/CAPIShop.node.js"
+    ]
+  },
+  "devDependencies": {
+    "@types/node": "^18.0.0",
+    "typescript": "^5.0.0",
+    "prettier": "^3.0.0",
+    "eslint": "^8.0.0"
+  },
+  "dependencies": {
+    "n8n-workflow": "^1.0.0",
+    "n8n-core": "^1.0.0"
+  }
+}
